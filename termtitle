@@ -1,0 +1,4 @@
+#!/bin/sh
+args="$*"
+#echo -e "\033]0;$args\007"
+echo "\033]0;$args\007Title '$args' set."
