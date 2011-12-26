@@ -1,4 +1,10 @@
 #!/bin/sh
-args="$*"
+if test $# -lt 1;
+then
+  MYCWD=`pwd`
+  export args=`basename $MYCWD`
+else
+  export args="$*"
+fi
 #echo -e "\033]0;$args\007"
 echo "\033]0;$args\007Title '$args' set."
